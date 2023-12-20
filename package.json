@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "18.17.1"
+  },
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only ./src/app.ts"
+    "dev": "txs src/app.ts",
+    "build": "tsup src",
+    "start": "node dist/app.js"
   },
   "author": "",
   "license": "ISC",
