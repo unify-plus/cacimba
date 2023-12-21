@@ -7,11 +7,7 @@ async function connectToDatabase(): Promise<void> {
   try {
     mongoose.set('strictQuery', true);
 
-    if (!process.env.URI) {
-        throw new Error('A variável de ambiente URI não está definida.');
-      }
-      
-    await mongoose.connect(process.env.URI);
+    await mongoose.connect("mongodb+srv://kauaneiras:s8fkI1zak6c4VIU9@cluster0.lbit3zf.mongodb.net/?retryWrites=true&w=majority");
 
     console.log('Conexão com o MongoDB estabelecida com sucesso.');
   } catch (error) {
